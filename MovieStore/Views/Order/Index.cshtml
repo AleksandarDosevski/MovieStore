@@ -1,0 +1,59 @@
+﻿@*@model MovieStore.Models.MovieViewModel*@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="custom-container">
+    <h1>Order</h1>
+    <hr />
+    @*<table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr class="wishlist-header">
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DirectorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MovieType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.AllMoviesFromWishlistByLoggedInUser)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DirectorName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MovieType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                </tr>
+            }
+            <tr class="total-style">
+                <td colspan="5"></td>
+                <td>Total:</td>
+                <td> &#36; @Html.DisplayFor(modelItem => modelItem.WishlistTotalPrice)</td>
+            </tr>
+            <tr class="total-style">
+                <td colspan="6"></td>
+                <td>
+                    <a asp-action="GoToCartFromWishlist" class="btn btn-block btn-success">Go to Cart</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>*@
+</div>
+
